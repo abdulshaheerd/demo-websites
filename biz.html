@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hiriyur Local Business | Official Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div>
+        <span id="biz-badge" class="inline-block text-[11px] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">Trusted Local Business • Hiriyur</span>
+        <h1 id="biz-name" class="text-lg sm:text-xl font-extrabold text-slate-900 leading-tight mt-0.5">Business Name</h1>
+      </div>
+      <a id="top-cta" href="#inquire" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold px-3.5 py-2.5 rounded-xl shadow-sm transition">
+        WhatsApp Us
+      </a>
+    </div>
+  </header>
+
+  <section id="hero-bg" class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 py-10 sm:py-14">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 px-3 py-1 rounded-full text-xs font-medium mb-4">
+        <span>⭐ <strong id="biz-rating">4.8</strong> (<span id="biz-reviews">150+</span> Google Reviews)</span>
+        <span>•</span>
+        <span id="biz-area">Hiriyur</span>
+      </div>
+      <h2 id="biz-headline" class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-snug">
+        Quality Products & Direct WhatsApp Service
+      </h2>
+      <p id="biz-subtext" class="mt-3 text-slate-200 text-sm sm:text-base max-w-2xl leading-relaxed">
+        Browse our offerings and connect directly with our team on WhatsApp for instant quotes, orders, and availability.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a id="hero-cta" href="#inquire" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-center px-6 py-3.5 rounded-xl shadow-lg transition">
+          Send Instant WhatsApp Inquiry →
+        </a>
+        <a id="call-btn" href="tel:0000000000" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-center px-6 py-3.5 rounded-xl transition">
+          Call Now: <span id="biz-phone">00000 00000</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 -mt-5">
+    <div class="bg-white rounded-2xl shadow-md border border-slate-100 p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="flex items-start gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold shrink-0">🕒</div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Business Hours</p>
+          <p id="biz-hours" class="text-sm font-semibold text-slate-800 mt-0.5">Mon–Sun: 9:00 AM – 9:00 PM</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold shrink-0">📍</div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Store Location</p>
+          <p id="biz-address" class="text-sm font-semibold text-slate-800 mt-0.5">Hiriyur, Karnataka</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-10">
+    <h3 id="grid-title" class="text-xl sm:text-2xl font-extrabold text-slate-900">Popular Categories</h3>
+    <p class="text-sm text-slate-500 mt-1">Tap any item below to pre-select it for your WhatsApp inquiry.</p>
+    <div id="items-grid" class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5"></div>
+  </section>
+
+  <section id="inquire" class="max-w-4xl mx-auto px-4 pb-10">
+    <div class="bg-white border-2 border-indigo-600/20 rounded-3xl p-6 sm:p-8 shadow-lg">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">Direct WhatsApp Desk</span>
+      <h3 id="form-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-2">Get Instant Quote / Order on WhatsApp</h3>
+      <p class="text-sm text-slate-500 mt-1">Fill in your details below—our team will reply directly on WhatsApp.</p>
+
+      <form onsubmit="sendInquiry(event)" class="mt-5 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Your Name *</label>
+            <input id="cust-name" type="text" required placeholder="e.g., Kiran Gowda" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-indigo-600 focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Select Category / Item</label>
+            <select id="item-select" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-indigo-600 focus:outline-none text-sm bg-white"></select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Requirement Details (Optional)</label>
+          <input id="cust-note" type="text" placeholder="e.g., Need price list / table for 6 people / bulk quote" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-indigo-600 focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-4 rounded-xl shadow-md text-sm sm:text-base transition">
+          Send Directly on WhatsApp →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="max-w-4xl mx-auto px-4 text-center text-xs text-slate-400 pb-8">
+    <p id="footer-copy">© 2026 Hiriyur Local Business</p>
+    <p class="mt-1">Website & WhatsApp Lead Demo by Abdul Shaheer</p>
+  </footer>
+
+  <script>
+    const businesses = {
+      sahara: {
+        badge: "Furniture & Bedding Showroom • Hiriyur",
+        name: "SAHARA BEDDING & FURNITURES",
+        area: "Taha Complex, Main Road",
+        address: "Taha Complex, Main Road, Hiriyur, Karnataka 577598",
+        hours: "Mon–Sun: 9:00 AM – 10:30 PM",
+        phone: "099645 30050",
+        wa: "919964530050",
+        rating: "4.8",
+        reviews: "120+",
+        headline: "Premium Sofas, Teakwood Cots & Orthopedic Mattresses",
+        subtext: "Explore our latest home and wedding furniture collections in Hiriyur. Message us on WhatsApp for catalog photos and best showroom prices.",
+        gridTitle: "Showroom Collections",
+        formTitle: "Request Catalog & Price Quote on WhatsApp",
+        items: [
+          { title: "🛋️ Sofa Sets & Recliners", desc: "L-shape, wooden, and fabric sofa sets for modern living rooms." },
+          { title: "🛏️ Wooden Cots & Wardrobes", desc: "Solid teakwood & engineered wood beds, wardrobes, and dressing tables." },
+          { title: "💤 Orthopedic & Spring Mattresses", desc: "Branded memory foam, coir, and spring mattresses in all sizes." },
+          { title: "💍 Complete Wedding Furniture Combos", desc: "Custom home-setup packages with local delivery in Hiriyur." }
+        ]
+      },
+      starfurniture: {
+        badge: "Furniture & Bedding House • Hiriyur",
+        name: "Star Furniture And Bedding House",
+        area: "Urban Bank Road, Hiriyur",
+        address: "Urban Bank Road, Hiriyur, Karnataka 577598",
+        hours: "Mon, Wed–Sun: 9:00 AM – 9:00 PM | Tue: 10:00 AM – 2:00 PM",
+        phone: "099453 72540",
+        wa: "919945372540",
+        rating: "4.7",
+        reviews: "95+",
+        headline: "Quality Home Furniture & Comfort Bedding on Urban Bank Road",
+        subtext: "Upgrade your home with durable beds, dining sets, office chairs, and mattresses. Get instant price quotes on WhatsApp.",
+        gridTitle: "Furniture & Bedding Range",
+        formTitle: "Ask Price & Availability on WhatsApp",
+        items: [
+          { title: "🛏️ Beds, Cots & Mattresses", desc: "Queen & king size beds paired with high-comfort mattresses." },
+          { title: "🍽️ Dining Tables & Chairs", desc: "4-seater and 6-seater wooden & glass-top dining sets." },
+          { title: "💺 Office & Study Furniture", desc: "Ergonomic office chairs, computer tables, and storage racks." },
+          { title: "🚚 Bulk & Home Package Orders", desc: "Special festive and family combo pricing with doorstep delivery." }
+        ]
+      },
+      nanjundeshwara: {
+        badge: "Hardware & Building Materials • Hiriyur",
+        name: "Sri Nanjundeshwara Enterprises",
+        area: "1st Cross College Road, Hiriyur",
+        address: "1st Cross College Road, Hiriyur, Karnataka 577598",
+        hours: "Mon–Sun: 9:00 AM – 8:00 PM",
+        phone: "091480 08456",
+        wa: "919148008456",
+        rating: "4.9",
+        reviews: "140+",
+        headline: "Complete Hardware, Plumbing & Construction Supplies",
+        subtext: "Trusted by Hiriyur homeowners, engineers, and contractors. Send your material list on WhatsApp for fast bulk quotations.",
+        gridTitle: "Building & Hardware Supplies",
+        formTitle: "Send Material List for Instant Estimate",
+        items: [
+          { title: "🔧 General Hardware & Power Tools", desc: "Fasteners, locks, hinges, hand tools, and construction hardware." },
+          { title: "🚰 Plumbing, Pipes & Sanitaryware", desc: "CPVC/UPVC pipes, fittings, tanks, taps, and bathroom accessories." },
+          { title: "⚡ Electrical Wires & Switches", desc: "Branded cables, modular switches, MCBs, and lighting fittings." },
+          { title: "🏗️ Contractor Bulk Site Orders", desc: "Priority pricing and site delivery across Hiriyur taluk." }
+        ]
+      },
+      ayyappa: {
+        badge: "Hardware & Electrical Store • Hiriyur",
+        name: "Ayyappa Hardware",
+        area: "Beside Vani First Grade College",
+        address: "Beside Vani First Grade College, Hiriyur, Karnataka 577599",
+        hours: "Mon–Sat: 9:00 AM – 8:30 PM | Sun: 9:00 AM – 1:00 PM",
+        phone: "098866 20076",
+        wa: "919886620076",
+        rating: "4.8",
+        reviews: "110+",
+        headline: "Your One-Stop Hardware & Home Improvement Store in Hiriyur",
+        subtext: "Everything you need for house construction, plumbing repairs, and painting—inquire on WhatsApp before visiting.",
+        gridTitle: "Store Categories",
+        formTitle: "Request Quick Quote on WhatsApp",
+        items: [
+          { title: "🛠️ Door Fittings, Locks & Hardware", desc: "Stainless steel handles, tower bolts, hinges, and safety locks." },
+          { title: "🚿 Pipes, Fittings & Water Tanks", desc: "Complete plumbing solutions for residential and commercial sites." },
+          { title: "🎨 Paints, Primers & Waterproofing", desc: "Interior/exterior emulsions, putty, brushes, and roof coatings." },
+          { title: "📋 Custom Quotation Request", desc: "Send your item list on WhatsApp for same-day rate confirmation." }
+        ]
+      },
+      sagarreddy: {
+        badge: "Family Restaurant • Main Road, Hiriyur",
+        name: "Hotel Sagar Reddy",
+        area: "Main Road, Near Sri Rama Temple",
+        address: "Main Road, near Sri Rama Temple, Hiriyur, Karnataka 577598",
+        hours: "Mon–Sun: 12:30 PM – 10:00 PM",
+        phone: "098863 00056",
+        wa: "919886300056",
+        rating: "4.4",
+        reviews: "400+",
+        headline: "Authentic Family Dining, Meals & Party Catering in Hiriyur",
+        subtext: "Loved by 400+ diners on Main Road. Pre-order family takeaway packs, reserve tables, or book bulk event catering on WhatsApp.",
+        gridTitle: "Popular Menu & Services",
+        formTitle: "Order Takeaway / Book Table on WhatsApp",
+        items: [
+          { title: "🍛 South & North Indian Meals", desc: "Freshly prepared daily thalis, rotis, curries, and rice specialties." },
+          { title: "🍗 Signature Biryani & Starters", desc: "Hot dum biryani, tandoori platters, and family combo packs." },
+          { title: "👨‍👩‍👧‍👦 Family Table Reservation", desc: "Reserve seating in advance for weekend dinners and family outings." },
+          { title: "🎉 Bulk Party & Event Catering", desc: "Custom food packages for functions, office lunches, and gatherings." }
+        ]
+      },
+      vaishnavi: {
+        badge: "NH-48 Highway Family Dining • Vaddanahalli",
+        name: "Vaishnavi Family Restaurant",
+        area: "Beside IOCL Petrol Pump, Vaddanahalli",
+        address: "Beside IOCL Petrol Pump, Kasturirangappena, Vaddanahalli, Karnataka 577511",
+        hours: "Mon–Sun: 11:00 AM – 1:00 AM",
+        phone: "099723 82995",
+        wa: "919972382995",
+        rating: "4.5",
+        reviews: "500+",
+        headline: "Top-Rated Highway Family Restaurant on NH-48",
+        subtext: "Spacious parking, clean family dining, and fast service open till 1:00 AM. Pre-order on WhatsApp so your food is hot when you arrive.",
+        gridTitle: "Highway Dining & Pre-Order",
+        formTitle: "Pre-Order Food / Reserve Table on WhatsApp",
+        items: [
+          { title: "🍲 Hot Highway Lunch & Dinner", desc: "Fresh rotis, dal tadka, paneer & non-veg gravies, and meals." },
+          { title: "🍚 Biryani & Fried Rice Specials", desc: "Quick-serve biryani, noodles, and starters for travelers." },
+          { title: "🚌 Group & Bus Traveler Pre-Order", desc: "Share your ETA on WhatsApp for zero-wait group dining." },
+          { title: "🌙 Late-Night Dining (Till 1:00 AM)", desc: "Safe, well-lit highway stop right beside IOCL Petrol Pump." }
+        ]
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('biz') || 'sahara';
+    const b = businesses[key] || businesses.sahara;
+
+    document.title = `${b.name} | Official Page`;
+    document.getElementById('biz-badge').textContent = b.badge;
+    document.getElementById('biz-name').textContent = b.name;
+    document.getElementById('biz-area').textContent = b.area;
+    document.getElementById('biz-address').textContent = b.address;
+    document.getElementById('biz-hours').textContent = b.hours;
+    document.getElementById('biz-phone').textContent = b.phone;
+    document.getElementById('call-btn').href = `tel:${b.phone.replace(/\s+/g, '')}`;
+    document.getElementById('biz-rating').textContent = b.rating;
+    document.getElementById('biz-reviews').textContent = b.reviews;
+    document.getElementById('biz-headline').textContent = b.headline;
+    document.getElementById('biz-subtext').textContent = b.subtext;
+    document.getElementById('grid-title').textContent = b.gridTitle;
+    document.getElementById('form-title').textContent = b.formTitle;
+    document.getElementById('footer-copy').textContent = `© 2026 ${b.name} • Hiriyur, Karnataka`;
+
+    const grid = document.getElementById('items-grid');
+    const select = document.getElementById('item-select');
+
+    b.items.forEach(item => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'text-left bg-white hover:border-indigo-500 border border-slate-200 p-4 rounded-2xl shadow-sm transition group';
+      btn.innerHTML = `<div class="flex justify-between items-center"><span class="font-bold text-slate-900 group-hover:text-indigo-700">${item.title}</span><span class="text-xs font-semibold text-indigo-600">Select →</span></div><p class="text-xs text-slate-500 mt-1">${item.desc}</p>`;
+      btn.onclick = () => {
+        select.value = item.title;
+        document.getElementById('inquire').scrollIntoView({ behavior: 'smooth' });
+      };
+      grid.appendChild(btn);
+
+      const opt = document.createElement('option');
+      opt.value = item.title;
+      opt.textContent = item.title;
+      select.appendChild(opt);
+    });
+
+    function sendInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('cust-name').value.trim();
+      const item = select.value;
+      const note = document.getElementById('cust-note').value.trim();
+      const msg = `Namaste ${b.name},\n\nI found you on Google and would like to inquire:\n• *Name:* ${name}\n• *Category:* ${item}${note ? `\n• *Details:* ${note}` : ''}\n\nPlease share details.`;
+      window.open(`https://wa.me/${b.wa}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
